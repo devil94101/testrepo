@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Add CSS styles for your PDF page */
+
+        .imgStyles {
+            width: 100px;
+            height: 100px;
+        }
+
+        .pageBreak {
+            page-break-after: always;
+        }
+    </style>
+</head>
+
+<body>
+    <% for(var i=0; i < imgArray.length; i++) { %>
+        <div class="pageBreak">
+        <% for(var j=0; j< imgArray[i].length; j++) { %>
+            
+            <h1>Welcome <%= name %>!</h1>
+            <p>Your email address is: <%= email %>
+            </p>
+            <img src="<%=imgArray[i][j]%>" class="imgStyles" />
+        <% } %>
+        </div>
+    <% } %>
+</body>
+
+</html>
